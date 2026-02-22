@@ -36,7 +36,7 @@ make uninstall
 ## Usage
 
 ```bash
-changelog-generator --api-key sk-ant-... --version 1.2.0
+changelog-generator --api-key {ANTHROPIC_TOKEN} --version 1.2.0
 ```
 
 ### Flags
@@ -64,7 +64,7 @@ Pass `--version` to cut a release. The tool will:
 6. Print the `git push` commands to finish
 
 ```bash
-changelog-generator --api-key sk-ant-... --version 1.2.0
+changelog-generator --api-key {ANTHROPIC_TOKEN} --version 1.2.0
 
 # stderr output:
 # info: last release tag: 1.1.3
@@ -80,7 +80,7 @@ changelog-generator --api-key sk-ant-... --version 1.2.0
 If the repo has no tags yet, the tool diffs the entire history and accepts any valid semver version:
 
 ```bash
-changelog-generator --api-key sk-ant-... --version 1.0.0
+changelog-generator --api-key {ANTHROPIC_TOKEN} --version 1.0.0
 ```
 
 ### Version validation
@@ -99,10 +99,10 @@ Run without `--version` to preview the changelog without writing anything or cre
 
 ```bash
 # Preview to stdout
-changelog-generator --api-key sk-ant-...
+changelog-generator --api-key {ANTHROPIC_TOKEN}
 
 # Save preview to a file
-changelog-generator --api-key sk-ant-... --output preview.md
+changelog-generator --api-key {ANTHROPIC_TOKEN} --output preview.md
 ```
 
 ## Diff strategy
@@ -112,5 +112,5 @@ By default, if the total lines changed is **≤ 2000**, the full diff is sent to
 Diagnostic messages go to stderr; changelog content goes to stdout — so piping works cleanly:
 
 ```bash
-changelog-generator --api-key sk-ant-... | less
+changelog-generator --api-key {ANTHROPIC_TOKEN} | less
 ```
