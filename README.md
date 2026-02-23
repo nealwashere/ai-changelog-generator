@@ -36,7 +36,7 @@ make uninstall
 ## Usage
 
 ```bash
-changelog-generator --api-key {ANTHROPIC_TOKEN} --version 1.2.0
+changelog-generator --api-key {ANTHROPIC_TOKEN} --version {SEMVER}
 ```
 
 ### Flags
